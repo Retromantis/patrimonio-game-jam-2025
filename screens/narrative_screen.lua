@@ -120,7 +120,7 @@ function narrative_screen.draw()
 end
 
 function narrative_screen.update(dt)
-    mx, my = fix_xy(love.mouse.getPosition())
+    mx, my = love.mouse.getPosition()
 
     bt_next.isHovered = into_rect(bt_next, mx, my)
 end

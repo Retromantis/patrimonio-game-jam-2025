@@ -41,7 +41,7 @@ function love.load()
     -- game_screen_load()
     narrative_screen.load()
 
-    track_menu = love.audio.newSource("assets/sounds/menu.wav", "stream")
+    track_menu = love.audio.newSource("assets/sounds/menu.ogg", "stream")
     track_02 = love.audio.newSource("assets/sounds/track02.ogg", "stream")
     track_03 = love.audio.newSource("assets/sounds/track03.ogg", "stream")
     track_06 = love.audio.newSource("assets/sounds/track06.ogg", "stream")
@@ -57,14 +57,14 @@ end
 
 function love.draw()
     -- Dibujar en el canvas virtual
-    love.graphics.setCanvas(canvas)
-    love.graphics.clear()
+    -- love.graphics.setCanvas(canvas)
+    -- love.graphics.clear()
     current_screen.draw()
-    love.graphics.setCanvas()
+    -- love.graphics.setCanvas()
 
     -- Escalar y dibujar el canvas a pantalla completa
     -- love.graphics.setColor(1, 1, 1)
-    love.graphics.draw(canvas, 0, 0, 0, scale_x, scale_y)
+    -- love.graphics.draw(canvas, 0, 0, 0, scale_x, scale_y)
 end
 
 function love.update(dt)

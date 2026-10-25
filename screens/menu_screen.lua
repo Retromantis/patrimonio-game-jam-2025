@@ -53,7 +53,8 @@ function menu_screen.init()
 end
 
 function menu_screen.update(dt)
-    mx, my = fix_xy(love.mouse.getPosition())
+    -- mx, my = fix_xy(love.mouse.getPosition())
+    mx, my = love.mouse.getPosition()
 
     -- Verifica si el mouse está sobre el botón
     bt_play.isHovered = into_rect(bt_play, mx, my)
